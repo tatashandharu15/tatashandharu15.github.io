@@ -2451,3 +2451,55 @@ h1,h2,h3,h4,h5,h6,.sitename {
   .site-header .nav-brand-mark { width: 35px; height: 35px; flex-basis: 35px; }
   .site-header .navmenu { top: 8px; right: 8px; width: calc(100vw - 16px); max-height: calc(100svh - 16px); }
 }
+
+
+/* Final desktop rail polish: keep the identity visible and align the rail cleanly. */
+@media (min-width: 1200px) {
+  .site-header {
+    left: 20px;
+    width: 216px;
+  }
+  .site-header .navmenu {
+    padding: 19px 12px 13px;
+    gap: 18px;
+  }
+  .site-header .navmenu a.nav-brand,
+  .site-header .navmenu a.nav-brand:focus,
+  .site-header .navmenu a.nav-brand:hover {
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+    max-width: none;
+    min-height: 42px;
+    height: auto;
+    margin: 0;
+    padding: 0 2px;
+    overflow: visible;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+  }
+  .site-header .navmenu a.nav-brand .nav-brand-copy {
+    display: flex !important;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+  .site-header .navmenu a.nav-brand .nav-brand-copy strong,
+  .site-header .navmenu a.nav-brand .nav-brand-copy small {
+    display: block !important;
+    visibility: visible;
+    opacity: 1;
+  }
+  .site-header .navmenu a.nav-brand .nav-brand-mark {
+    flex: 0 0 38px;
+  }
+  body:has(> #header.site-header) main.main,
+  body:has(> #header.site-header) footer.footer {
+    margin-left: 256px;
+  }
+}
