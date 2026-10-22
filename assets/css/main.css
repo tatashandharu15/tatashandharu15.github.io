@@ -2702,3 +2702,42 @@ h1,h2,h3,h4,h5,h6,.sitename {
     font-size: 1.15rem;
   }
 }
+
+
+/* Selected project category artwork — bespoke icon-led covers in the charcoal / brass palette. */
+.portfolio .project-art-icon {
+  display: flex; align-items: center; justify-content: center; isolation: isolate;
+  background-color: #20271f;
+  background-image: linear-gradient(rgba(214,190,143,.055) 1px, transparent 1px), linear-gradient(90deg, rgba(214,190,143,.055) 1px, transparent 1px), radial-gradient(ellipse at 50% 55%, rgba(190,151,86,.16), transparent 58%);
+  background-size: 28px 28px, 28px 28px, auto;
+}
+.portfolio .project-art-icon::before, .portfolio .project-art-icon::after {
+  content: ""; position: absolute; z-index: -1; border: 1px solid rgba(205,174,115,.2); border-radius: 50%; pointer-events: none;
+}
+.portfolio .project-art-icon::before { width: 220px; height: 220px; }
+.portfolio .project-art-icon::after { width: 164px; height: 164px; }
+.portfolio .project-art-icon .project-art-label {
+  top: 17px; left: 19px; right: 55px; color: #c8a66a; font-size: .58rem; line-height: 1.5; letter-spacing: .15em;
+}
+.portfolio .project-art-icon .project-category-icon {
+  display: inline-flex; align-items: center; justify-content: center; width: 100px; height: 100px;
+  border: 1px solid rgba(205,174,115,.45); border-radius: 50%; background: rgba(19,24,19,.65);
+  color: #e1c58d; font-size: 3rem; box-shadow: 0 0 0 12px rgba(205,174,115,.035), 0 18px 45px rgba(0,0,0,.2);
+  transition: transform .3s ease, color .3s ease, border-color .3s ease;
+}
+.portfolio .project-card:hover .project-category-icon { transform: translateY(-4px) scale(1.04); color: #fff0cf; border-color: rgba(225,197,141,.8); }
+.portfolio .project-art-icon .project-art-mark { right: 18px; bottom: 8px; color: rgba(226,197,141,.24); font-size: 3.5rem; }
+.portfolio .project-art-icon.art-ai { background-image: linear-gradient(135deg, rgba(91,104,83,.18), transparent 55%), linear-gradient(rgba(214,190,143,.055) 1px, transparent 1px), linear-gradient(90deg, rgba(214,190,143,.055) 1px, transparent 1px); background-size: auto, 28px 28px, 28px 28px; }
+.portfolio .project-art-icon.art-market { background-color: #1d2825; }
+.portfolio .project-art-icon.art-risk { background-color: #29251e; }
+.portfolio .project-art-icon.art-vision { background-color: #20252b; }
+.portfolio .project-art-icon.art-sales { background-color: #29261f; }
+.portfolio .project-art-icon.art-etl { background-color: #20292a; }
+.portfolio .project-art-icon.art-video { background-color: #292126; }
+.portfolio .project-art-icon.art-retail { background-color: #29271f; }
+@media (max-width: 575px) {
+  .portfolio .project-art-icon .project-category-icon { width: 84px; height: 84px; font-size: 2.5rem; }
+  .portfolio .project-art-icon::before { width: 180px; height: 180px; }
+  .portfolio .project-art-icon::after { width: 136px; height: 136px; }
+}
+@media (prefers-reduced-motion: reduce) { .portfolio .project-art-icon .project-category-icon { transition: none; } }
