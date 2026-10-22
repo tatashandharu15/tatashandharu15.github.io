@@ -2640,3 +2640,30 @@ h1,h2,h3,h4,h5,h6,.sitename {
   }
   .site-header .navmenu ul a.nav-contact span { display: block; }
 }
+
+
+/* Restore the original floating-rail behavior: the page must not reserve a sidebar column. */
+@media (min-width: 1200px) {
+  html, body,
+  body:has(> #header.site-header) {
+    background: initial;
+  }
+  body:has(> #header.site-header) main.main,
+  body:has(> #header.site-header) footer.footer {
+    margin-left: 0 !important;
+  }
+  body:has(> #header.site-header) main.main .hero {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+  .site-header {
+    left: 22px;
+    width: 76px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+  }
+  .site-header .navmenu {
+    background: rgba(27,32,27,.94);
+  }
+}
