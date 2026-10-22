@@ -45,22 +45,25 @@
 
 <body class="index-page">
 
-  <header id="header" class="header d-flex flex-column justify-content-center">
-
-    <i class="header-toggle d-xl-none bi bi-list"></i>
-
-    <nav id="navmenu" class="navmenu">
+  <header id="header" class="site-header">
+    <button class="header-toggle d-xl-none" type="button" aria-label="Open navigation" aria-controls="navmenu">
+      <i class="bi bi-list" aria-hidden="true"></i>
+    </button>
+    <nav id="navmenu" class="navmenu" aria-label="Main navigation">
+      <a class="nav-brand" href="#hero" aria-label="Tatas Handharu Sworo, home">
+        <span class="nav-brand-mark">T<span>.</span></span>
+        <span class="nav-brand-copy"><strong>TATAS HANDHARU</strong><small>SOFTWARE ENGINEER</small></span>
+      </a>
       <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+        <li><a href="#hero" class="active"><span>Home</span></a></li>
+        <li><a href="#about"><span>About</span></a></li>
+        <li><a href="#skills"><span>Skills</span></a></li>
+        <li><a href="#resume"><span>Experience</span></a></li>
+        <li><a href="#portfolio"><span>Projects</span></a></li>
+        <li><a class="nav-contact" href="#contact"><span>Contact <i class="bi bi-arrow-up-right" aria-hidden="true"></i></span></a></li>
       </ul>
     </nav>
-
   </header>
-
   <main class="main">
 
     <!-- Hero Section -->
@@ -321,7 +324,7 @@
       <div class="container section-title" data-aos="fade-up">
         <span class="section-kicker">SELECTED WORK</span>
         <h2>Selected Projects</h2>
-        <p>A curated selection of software, AI, computer vision, and analytics work. Each project links to its live experience or source repository.</p>
+        <p>A curated selection of software engineering, AI, data science, computer vision, and data engineering projects. Explore the live work or source repository behind each project.</p>
       </div>
 
       <div class="container">
@@ -341,9 +344,9 @@
               <span class="project-art-mark">01</span>
             </div>
             <div class="project-card-body">
-              <div class="project-meta"><span>APPLICATIONS</span><span>01 / 06</span></div>
+              <div class="project-meta"><span>APPLICATION ENGINEERING</span><span>01 / 09</span></div>
               <h3>AI-Assisted Lead Management</h3>
-              <p>A mini lead-management system built around a structured workflow with AI-assisted support.</p>
+              <p>A dual-stack lead-management application with Python/FastAPI and TypeScript/Fastify implementations.</p>
               <a class="project-link" href="https://github.com/tatashandharu15/ai-assisted-lead-management" target="_blank" rel="noopener noreferrer">Explore repository <i class="bi bi-arrow-up-right"></i></a>
             </div>
           </article>
@@ -354,7 +357,7 @@
               <span class="project-image-index">02</span>
             </div>
             <div class="project-card-body">
-              <div class="project-meta"><span>AI &amp; NLP</span><span>02 / 06</span></div>
+              <div class="project-meta"><span>AI &amp; NLP</span><span>02 / 09</span></div>
               <h3>CV Analytics with LLM</h3>
               <p>An AI-assisted experience for CV review and candidate analysis.</p>
               <a class="project-link" href="https://finpronautixtech.streamlit.app/" target="_blank" rel="noopener noreferrer">View live project <i class="bi bi-arrow-up-right"></i></a>
@@ -363,13 +366,26 @@
 
           <article class="project-card">
             <div class="project-image">
-              <img src="assets/img/dataScientist/Logo-IDX.png" alt="Credit risk analysis project preview" loading="lazy">
+              <img src="assets/img/dataScientist/Logo-IDX.png" alt="Indonesia Stock Exchange price prediction project preview" loading="lazy">
               <span class="project-image-index">03</span>
             </div>
             <div class="project-card-body">
-              <div class="project-meta"><span>DATA SCIENCE</span><span>03 / 06</span></div>
+              <div class="project-meta"><span>TIME-SERIES ML</span><span>03 / 09</span></div>
+              <h3>IDX Stock Price Prediction</h3>
+              <p>Stock-price analysis and prediction using a Long Short-Term Memory (LSTM) approach.</p>
+              <a class="project-link" href="https://github.com/tatashandharu15/Analysis_and_Prediction_of_Indonesia_Stock_Exchange-IDX-_Stock_Prices" target="_blank" rel="noopener noreferrer">Explore repository <i class="bi bi-arrow-up-right"></i></a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image">
+              <img src="assets/img/dataScientist/Logo-IDX.png" alt="Credit risk analysis project preview" loading="lazy">
+              <span class="project-image-index">04</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta"><span>DATA SCIENCE</span><span>04 / 09</span></div>
               <h3>Credit Risk Analysis</h3>
-              <p>Loan prediction analysis developed as an IDX Partners project-based internship project.</p>
+              <p>Loan prediction analysis developed during the IDX Partners project-based internship.</p>
               <a class="project-link" href="https://github.com/tatashandharu15/Credit-Risk-Analysis-and-Prediction_IDX-Partners" target="_blank" rel="noopener noreferrer">Explore repository <i class="bi bi-arrow-up-right"></i></a>
             </div>
           </article>
@@ -377,23 +393,49 @@
           <article class="project-card">
             <div class="project-image">
               <img src="assets/img/computerVision/plat.jpeg" alt="Vehicle plate detection project preview" loading="lazy">
-              <span class="project-image-index">04</span>
+              <span class="project-image-index">05</span>
             </div>
             <div class="project-card-body">
-              <div class="project-meta"><span>COMPUTER VISION</span><span>04 / 06</span></div>
+              <div class="project-meta"><span>COMPUTER VISION</span><span>05 / 09</span></div>
               <h3>Vehicle Plate Detection</h3>
-              <p>A computer-vision project focused on vehicle license plate detection.</p>
+              <p>A computer-vision project focused on detecting vehicle license plates.</p>
               <a class="project-link" href="https://github.com/tatashandharu15/Vehicle-Plate-Detection" target="_blank" rel="noopener noreferrer">Explore repository <i class="bi bi-arrow-up-right"></i></a>
             </div>
           </article>
 
           <article class="project-card">
             <div class="project-image">
-              <img src="assets/img/dataAnalyst/Youtube_logo.png" alt="YouTube analytics dashboard project preview" loading="lazy">
-              <span class="project-image-index">05</span>
+              <img src="assets/img/dataAnalyst/KimiaFarma.jpeg" alt="Kimia Farma sales performance analysis preview" loading="lazy">
+              <span class="project-image-index">06</span>
             </div>
             <div class="project-card-body">
-              <div class="project-meta"><span>DATA VISUALIZATION</span><span>05 / 06</span></div>
+              <div class="project-meta"><span>BUSINESS ANALYTICS</span><span>06 / 09</span></div>
+              <h3>Kimia Farma Sales Analytics</h3>
+              <p>Sales-performance analysis using BigQuery, data marts, and Looker Studio.</p>
+              <a class="project-link" href="https://github.com/tatashandharu15/Analyzing-Kimia-Farma-Sales-Performance" target="_blank" rel="noopener noreferrer">Explore repository <i class="bi bi-arrow-up-right"></i></a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image">
+              <img src="assets/img/dataengineer/etlcredit.jpeg" alt="Credit card ETL workflow preview" loading="lazy">
+              <span class="project-image-index">07</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta"><span>DATA ENGINEERING</span><span>07 / 09</span></div>
+              <h3>Credit Card ETL Pipeline</h3>
+              <p>Data cleaning, transformation, deduplication, and dataset integration with Pentaho Data Integration.</p>
+              <a class="project-link" href="https://github.com/tatashandharu15/etl-credit-card-using-pentaho" target="_blank" rel="noopener noreferrer">Explore repository <i class="bi bi-arrow-up-right"></i></a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image">
+              <img src="assets/img/dataAnalyst/Youtube_logo.png" alt="YouTube analytics dashboard project preview" loading="lazy">
+              <span class="project-image-index">08</span>
+            </div>
+            <div class="project-card-body">
+              <div class="project-meta"><span>DATA VISUALIZATION</span><span>08 / 09</span></div>
               <h3>YouTube Analytics Dashboard</h3>
               <p>An interactive Looker Studio report for exploring YouTube analytics.</p>
               <a class="project-link" href="https://lookerstudio.google.com/reporting/49eb532f-0044-4d93-a6e1-acec966cb97a" target="_blank" rel="noopener noreferrer">Open dashboard <i class="bi bi-arrow-up-right"></i></a>
@@ -403,10 +445,10 @@
           <article class="project-card">
             <div class="project-image">
               <img src="assets/img/dataAnalyst/Adidas.jpeg" alt="Adidas sales analysis project preview" loading="lazy">
-              <span class="project-image-index">06</span>
+              <span class="project-image-index">09</span>
             </div>
             <div class="project-card-body">
-              <div class="project-meta"><span>BUSINESS ANALYTICS</span><span>06 / 06</span></div>
+              <div class="project-meta"><span>BUSINESS ANALYTICS</span><span>09 / 09</span></div>
               <h3>Adidas Sales Analysis</h3>
               <p>Exploratory analysis of sales performance and business data.</p>
               <a class="project-link" href="https://github.com/tatashandharu15/Adidas-Sales-Performece-Analysis" target="_blank" rel="noopener noreferrer">Explore repository <i class="bi bi-arrow-up-right"></i></a>
