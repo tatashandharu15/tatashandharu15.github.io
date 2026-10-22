@@ -2667,3 +2667,38 @@ h1,h2,h3,h4,h5,h6,.sitename {
     background: rgba(27,32,27,.94);
   }
 }
+
+
+/* Fix icon rail: show recognizable Bootstrap icons instead of empty text-only tiles. */
+@media (min-width: 1200px) {
+  .site-header .navmenu ul a {
+    font-size: 1.15rem;
+  }
+  .site-header .navmenu ul a > i,
+  .site-header .navmenu ul a > .bi {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    font-size: 1.15rem;
+    line-height: 1;
+    opacity: 1 !important;
+    visibility: visible !important;
+    color: inherit;
+  }
+  .site-header .navmenu ul a > span {
+    font-size: .78rem;
+  }
+  .site-header .navmenu ul a.nav-contact > span {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    font-size: 1.15rem;
+  }
+  .site-header .navmenu ul a.nav-contact > span i {
+    font-size: 1.15rem;
+  }
+}
