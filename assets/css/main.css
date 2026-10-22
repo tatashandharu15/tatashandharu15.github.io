@@ -2547,3 +2547,96 @@ h1,h2,h3,h4,h5,h6,.sitename {
     background: transparent !important;
   }
 }
+
+
+/* Minimal floating icon rail: labels appear only on hover/focus; no name block. */
+@media (min-width: 1200px) {
+  .site-header { width: 76px; left: 22px; }
+  .site-header .navmenu {
+    align-items: center;
+    gap: 12px;
+    padding: 14px 10px;
+  }
+  .site-header .navmenu a.nav-brand,
+  .site-header .navmenu a.nav-brand:focus,
+  .site-header .navmenu a.nav-brand:hover {
+    width: 46px;
+    min-height: 46px;
+    height: 46px;
+    justify-content: center;
+    margin: 0 0 5px;
+    padding: 0;
+  }
+  .site-header .navmenu a.nav-brand .nav-brand-mark {
+    flex: 0 0 38px;
+    width: 38px;
+    height: 38px;
+  }
+  .site-header .navmenu a.nav-brand .nav-brand-copy { display: none !important; }
+  .site-header .navmenu ul {
+    width: 100%;
+    align-items: center;
+    gap: 7px;
+    padding: 0;
+  }
+  .site-header .navmenu ul li {
+    width: 100%;
+    justify-content: center;
+  }
+  .site-header .navmenu ul a,
+  .site-header .navmenu ul a:focus {
+    position: relative;
+    width: 46px;
+    min-width: 46px;
+    max-width: 46px;
+    height: 46px;
+    min-height: 46px;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    border-radius: 4px;
+    overflow: visible;
+    background: transparent;
+    color: #c9c9be;
+  }
+  .site-header .navmenu ul a > span {
+    position: absolute;
+    left: calc(100% + 12px);
+    top: 50%;
+    display: block;
+    width: max-content;
+    max-width: 180px;
+    padding: 10px 13px;
+    transform: translate(-5px, -50%);
+    border: 1px solid rgba(200,166,106,.28);
+    border-radius: 3px;
+    background: rgba(27,32,27,.98);
+    color: #e0c184;
+    font-size: .78rem;
+    line-height: 1.2;
+    box-shadow: 0 10px 26px rgba(0,0,0,.22);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity .16s ease, transform .16s ease, visibility .16s ease;
+    z-index: 1005;
+  }
+  .site-header .navmenu ul a:hover > span,
+  .site-header .navmenu ul a:focus-visible > span {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, -50%);
+  }
+  .site-header .navmenu ul a.nav-contact {
+    width: 46px;
+    min-width: 46px;
+    max-width: 46px;
+    height: 46px;
+    min-height: 46px;
+    margin: 4px 0 0;
+    padding: 0;
+    justify-content: center;
+    border: 1px solid rgba(200,166,106,.58);
+  }
+  .site-header .navmenu ul a.nav-contact span { display: block; }
+}
